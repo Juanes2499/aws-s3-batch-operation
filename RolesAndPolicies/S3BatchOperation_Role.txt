@@ -1,0 +1,2 @@
+S3BatchOperation_TrustPolicy.json
+S3BatchOperation_Permissions.json

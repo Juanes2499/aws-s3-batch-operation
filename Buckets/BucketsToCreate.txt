@@ -1,0 +1,4 @@
+jn-poc-s3batch-source
+jn-poc-s3batch-destination
+jn-poc-s3batch-manifest
+jn-poc-s3batch-report

@@ -1,0 +1,46 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Action": [
+				"s3:PutObject",
+				"s3:PutObjectAcl",
+				"s3:PutObjectTagging"
+			],
+			"Effect": "Allow",
+			"Resource": "arn:aws:s3:::jn-poc-s3batch-destination/*"
+		},
+		{
+			"Action": [
+				"s3:GetObject",
+				"s3:GetObjectAcl",
+				"s3:GetObjectTagging",
+				"s3:ListBucket"
+			],
+			"Effect": "Allow",
+			"Resource": [
+				"arn:aws:s3:::jn-poc-s3batch-source",
+				"arn:aws:s3:::jn-poc-s3batch-source/*"
+			]
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"s3:GetObject",
+				"s3:GetObjectVersion"
+			],
+			"Resource": [
+				"arn:aws:s3:::jn-poc-s3batch-manifest/*"
+			]
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"s3:PutObject"
+			],
+			"Resource": [
+				"arn:aws:s3:::jn-poc-s3batch-report/*"
+			]
+		}
+	]
+}
